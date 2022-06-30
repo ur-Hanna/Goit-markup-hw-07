@@ -1,350 +1,287 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Портфолио</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
-      integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="stylesheet" href="css/styles.css" />
-  </head>
-  <body>
-    <header class="header">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Портфолио</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+    integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <nav class="navigation">
+        <!-- логотип -->
+        <a href="#" class="logo navigation__logo " lang="en"><span class="logo--web">Web</span>Studio</a>
+        <!-- навигация -->
+        <ul class="navigation__list list">
+          <li class="navigation__item">
+            <a href="./index.html" class="navigation__link link">Студия</a>
+          </li>
+          <li class="navigation__item">
+            <a href="./portfolio.html" class="navigation__link link current">Портфолио</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#" class="navigation__link link">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+      <!-- контакты -->
+      <ul class="contacts list">
+        <li class="contacts__item">
+          <a href="mailto:info@devstudio.com" class="contacts__link link" rel="nofollow noopener noreferrer">
+            <svg width="16" height="12" class="contacts__icon">
+              <use href="./images/icons.svg#icon-envelope"></use>
+            </svg>
+            info@devstudio.com
+          </a>
+        </li>
+        <li class="contacts__item">
+          <a href="tel:+380961111111" class="contacts__link link" rel="nofollow noopener noreferrer">
+            <svg width="10" height="16" class="contacts__icon">
+              <use href="./images/icons.svg#icon-smartphone"></use>
+            </svg>
+            +38 096 111 11 11
+          </a>
+        </li>
+      </ul>
+    </div>
+  </header>
+  <main class="main-portfolio">
+    <!-- главная секция -->
+    <section class="projects section">
       <div class="container">
-        <nav class="header-nav">
-          <!--логотип -->
-          <a href="#" class="header-logo logo" lang="en"><span class="logo-web">Web</span>Studio</a>
-          <!-- навигация -->
-          <ul class="header-list list">
-            <li class="header-item leveling">
-              <a href="./index.html" class="header-link link">Студия</a>
-            </li>
-            <li class="header-item leveling">
-              <a href="./portfolio.html" class="header-link link current">Портфолио</a>
-            </li>
-            <li class="header-item leveling">
-              <a href="#" class="header-link link">Контакты</a>
-            </li>
-          </ul>
-        </nav>
-        <!-- контакты -->
-        <ul class="header-contacts list">
-          <li class="contacts-item">
-            <a
-              href="mailto:info@devstudio.com"
-              class="contacts-link link"
-              rel="nofollow noopener noreferrer"
-            >
-              <svg width="16" height="12" class="contacts-icon">
-                <use href="./images/icons.svg#icon-envelope"></use>
-        <h1 class="hidden">Выбор вкладок</h1>
-              </svg>
-              info@devstudio.com
+        <h1 class="hidden">Фильтры</h1>
+        <ul class="radio-set list">
+          <li class="radio-set__item">
+            <button type="button" class="radio-set__btn btn">Все</button>
+          </li>
+          <li class="radio-set__item">
+            <button type="button" class="radio-set__btn btn">Веб-сайты</button>
+          </li>
+          <li class="radio-set__item">
+            <button type="button" class="radio-set__btn btn">Приложения</button>
+          </li>
+          <li class="radio-set__item">
+            <button type="button" class="radio-set__btn btn">Дизайн</button>
+          </li>
+          <li class="radio-set__item">
+            <button type="button" class="radio-set__btn btn">Маркетинг</button>
+          </li>
+        </ul>
+        <!-- часть с проектами -->
+        <ul class="card-set list">
+          <li class="card-set__item">
+            <a href="#" class="card-set__link link" rel="nofollow noopener noreferrer">
+              <div class="card-set__overlay">
+                <img class="card-set__image" src="./images/web-site.jpg" alt="Веб-сайт" width="370" height="294" />
+                <p class="card-set__description">
+                  Ресурс предлагает комплексные предложения с разным уровнем функционала и
+                  сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
+                  или частном лице.
+                </p>
+              </div>
+              <div class="card-set__meta">
+                <h2 class="card-set__title">Технокряк</h2>
+                <p class="card-set__subtitle">Веб-сайт</p>
+              </div>
             </a>
           </li>
-          <li class="contacts-item">
-            <a
-              href="tel:+380961111111"
-              class="contacts-link link"
-              rel="nofollow noopener noreferrer"
-            >
-              <svg width="10" height="16" class="contacts-icon">
-                <use href="./images/icons.svg#icon-smartphone"></use>
-              </svg>
-              +38 096 111 11 11
+          <li class="card-set__item">
+            <a href="#" class="card-set__link link" rel="nofollow noopener noreferrer">
+              <div class="card-set__overlay">
+                <img class="card-set__image" src="./images/basketball.jpg" alt="Постер с двумя баскетболистами"
+                  width="370" height="294" />
+                <p class="card-set__description">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui sequi excepturi
+                  ipsa magni incidunt dolores iure officia, aliquid vel obcaecati!
+                </p>
+              </div>
+              <div class="card-set__meta">
+                <h2 class="card-set__title">Постер New Orlean vs Golden Star</h2>
+                <p class="card-set__subtitle">Дизайн</p>
+              </div>
+            </a>
+          </li>
+          <li class="card-set__item">
+            <a href="#" class="card-set__link link" rel="nofollow noopener noreferrer">
+              <div class="card-set__overlay">
+                <img class="card-set__image" src="./images/seafood.jpg" alt="Название ресторана на фоне рыбы"
+                  width="370" height="294" />
+                <p class="card-set__description">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui sequi excepturi
+                  ipsa magni incidunt dolores iure officia, aliquid vel obcaecati!
+                </p>
+              </div>
+              <div class="card-set__meta">
+                <h2 class="card-set__title">Ресторан Seafood</h2>
+                <p class="card-set__subtitle">Приложение</p>
+              </div>
+            </a>
+          </li>
+          <li class="card-set__item">
+            <a href="#" class="card-set__link link" rel="nofollow noopener noreferrer">
+              <div class="card-set__overlay">
+                <img class="card-set__image" src="./images/marketing.jpg" alt="Наушники" width="370" height="294" />
+                <p class="card-set__description">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui sequi excepturi
+                  ipsa magni incidunt dolores iure officia, aliquid vel obcaecati!
+                </p>
+              </div>
+              <div class="card-set__meta">
+                <h2 class="card-set__title">Проект Prime</h2>
+                <p class="card-set__subtitle">Маркетинг</p>
+              </div>
+            </a>
+          </li>
+          <li class="card-set__item">
+            <a href="#" class="card-set__link link" rel="nofollow noopener noreferrer">
+              <div class="card-set__overlay">
+                <img class="card-set__image" src="./images/boxes.jpg" alt="Белая и бежевая коробки" width="370"
+                  height="294" />
+                <p class="card-set__description">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui sequi excepturi
+                  ipsa magni incidunt dolores iure officia, aliquid vel obcaecati!
+                </p>
+              </div>
+              <div class="card-set__meta">
+                <h2 class="card-set__title">Проект Boxes</h2>
+                <p class="card-set__subtitle">Приложение</p>
+              </div>
+            </a>
+          </li>
+          <li class="card-set__item">
+            <a href="#" class="card-set__link link" rel="nofollow noopener noreferrer">
+              <div class="card-set__overlay">
+                <img class="card-set__image" src="./images/monitor.jpg" alt="Монитор с сайтом" width="370"
+                  height="294" />
+                <p class="card-set__description">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui sequi excepturi
+                  ipsa magni incidunt dolores iure officia, aliquid vel obcaecati!
+                </p>
+              </div>
+              <div class="card-set__meta">
+                <h2 class="card-set__title">Inspiration has no Borders</h2>
+                <p class="card-set__subtitle">Веб-сайт</p>
+              </div>
+            </a>
+          </li>
+          <li class="card-set__item">
+            <a href="#" class="card-set__link link" rel="nofollow noopener noreferrer">
+              <div class="card-set__overlay">
+                <img class="card-set__image" src="./images/opened-book.jpg" alt="Открытый журнал" width="370"
+                  height="294" />
+                <p class="card-set__description">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui sequi excepturi
+                  ipsa magni incidunt dolores iure officia, aliquid vel obcaecati!
+                </p>
+              </div>
+              <div class="card-set__meta">
+                <h2 class="card-set__title">Издание Limited Edition</h2>
+                <p class="card-set__subtitle">Дизайн</p>
+              </div>
+            </a>
+          </li>
+          <li class="card-set__item">
+            <a href="#" class="card-set__link link" rel="nofollow noopener noreferrer">
+              <div class="card-set__overlay">
+                <img class="card-set__image" src="./images/project-label.jpg" alt="Этикетка с надписью" width="370"
+                  height="294" />
+                <p class="card-set__description">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui sequi excepturi
+                  ipsa magni incidunt dolores iure officia, aliquid vel obcaecati!
+                </p>
+              </div>
+              <div class="card-set__meta">
+                <h2 class="card-set__title">Проект <span class="upper">Lab</span></h2>
+                <p class="card-set__subtitle">Маркетинг</p>
+              </div>
+            </a>
+          </li>
+          <li class="card-set__item">
+            <a href="#" class="card-set__link link" rel="nofollow noopener noreferrer">
+              <div class="card-set__overlay">
+                <img class="card-set__image" src="./images/business.jpg" alt="Ноутбук с названием фирмы" width="370"
+                  height="294" />
+                <p class="card-set__description">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui sequi excepturi
+                  ipsa magni incidunt dolores iure officia, aliquid vel obcaecati!
+                </p>
+              </div>
+              <div class="card-set__meta">
+                <h2 class="card-set__title">Growing Business</h2>
+                <p class="card-set__subtitle">Приложение</p>
+              </div>
             </a>
           </li>
         </ul>
       </div>
-    </header>
-    <main class="main-portfolio">
-      <!-- главная секция -->
-      <section class="projects section">
-        <div class="container">
-          <ul class="buttons-list list">
-            <li class="buttons-item">
-              <button type="button" class="projects-btn btn">Все</button>
-            </li>
-            <li class="buttons-item">
-              <button type="button" class="projects-btn btn">Веб-сайты</button>
-            </li>
-            <li class="buttons-item">
-              <button type="button" class="projects-btn btn">Приложения</button>
-            </li>
-            <li class="buttons-item">
-              <button type="button" class="projects-btn btn">Дизайн</button>
-            </li>
-            <li class="buttons-item">
-              <button type="button" class="projects-btn btn">Маркетинг</button>
-            </li>
-          </ul>
-          <!-- часть с проектами -->
-          <ul class="projects-list list">
-            <li class="project-item">
-              <a href="#" class="project-link link" rel="nofollow noopener noreferrer">
-                <div class="project-thumb">
-                  <img
-                    class="project-img"
-                    src="./images/web-site.jpg"
-                    alt="Веб-сайт"
-                    width="370"
-                    height="294"
-                  />
-                  <p class="project-overlay">
-                    Ресурс предлагает комплексные предложения с разным уровнем функционала и
-                    сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
-                    или частном лице.
-                  </p>
-                </div>
-                <div class="project-img-container">
-                  <h2 class="project-container-heading">Технокряк</h2>
-                  <p class="project-container-sub">Веб-сайт</p>
-                </div>
-              </a>
-            </li>
-            <li class="project-item">
-              <a href="#" class="project-link link" rel="nofollow noopener noreferrer">
-                <div class="project-thumb">
-                  <img
-                    class="project-img"
-                    src="./images/basketball.jpg"
-                    alt="Постер с двумя баскетболистами"
-                    width="370"
-                    height="294"
-                  />
-                  <p class="project-overlay">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui sequi excepturi
-                    ipsa magni incidunt dolores iure officia, aliquid vel obcaecati!
-                  </p>
-                </div>
-                <div class="project-img-container">
-                  <h2 class="project-container-heading">Постер New Orlean vs Golden Star</h2>
-                  <p class="project-container-sub">Дизайн</p>
-                </div>
-              </a>
-            </li>
-            <li class="project-item">
-              <a href="#" class="project-link link" rel="nofollow noopener noreferrer">
-                <div class="project-thumb">
-                  <img
-                    class="project-img"
-                    src="./images/seafood.jpg"
-                    alt="Название ресторана на фоне рыбы"
-                    width="370"
-                    height="294"
-                  />
-                  <p class="project-overlay">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui sequi excepturi
-                    ipsa magni incidunt dolores iure officia, aliquid vel obcaecati!
-                  </p>
-                </div>
-                <div class="project-img-container">
-                  <h2 class="project-container-heading">Ресторан Seafood</h2>
-                  <p class="project-container-sub">Приложение</p>
-                </div>
-              </a>
-            </li>
-            <li class="project-item">
-              <a href="#" class="project-link link" rel="nofollow noopener noreferrer">
-                <div class="project-thumb">
-                  <img
-                    class="project-img"
-                    src="./images/marketing.jpg"
-                    alt="Наушники"
-                    width="370"
-                    height="294"
-                  />
-                  <p class="project-overlay">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui sequi excepturi
-                    ipsa magni incidunt dolores iure officia, aliquid vel obcaecati!
-                  </p>
-                </div>
-                <div class="project-img-container">
-                  <h2 class="project-container-heading">Проект Prime</h2>
-                  <p class="project-container-sub">Маркетинг</p>
-                </div>
-              </a>
-            </li>
-            <li class="project-item">
-              <a href="#" class="project-link link" rel="nofollow noopener noreferrer">
-                <div class="project-thumb">
-                  <img
-                    class="project-img"
-                    src="./images/boxes.jpg"
-                    alt="Белая и бежевая коробки"
-                    width="370"
-                    height="294"
-                  />
-                  <p class="project-overlay">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui sequi excepturi
-                    ipsa magni incidunt dolores iure officia, aliquid vel obcaecati!
-                  </p>
-                </div>
-                <div class="project-img-container">
-                  <h2 class="project-container-heading">Проект Boxes</h2>
-                  <p class="project-container-sub">Приложение</p>
-                </div>
-              </a>
-            </li>
-            <li class="project-item">
-              <a href="#" class="project-link link" rel="nofollow noopener noreferrer">
-                <div class="project-thumb">
-                  <img
-                    class="project-img"
-                    src="./images/monitor.jpg"
-                    alt="Монитор с сайтом"
-                    width="370"
-                    height="294"
-                  />
-                  <p class="project-overlay">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui sequi excepturi
-                    ipsa magni incidunt dolores iure officia, aliquid vel obcaecati!
-                  </p>
-                </div>
-                <div class="project-img-container">
-                  <h2 class="project-container-heading">Inspiration has no Borders</h2>
-                  <p class="project-container-sub">Веб-сайт</p>
-                </div>
-              </a>
-            </li>
-            <li class="project-item">
-              <a href="#" class="project-link link" rel="nofollow noopener noreferrer">
-                <div class="project-thumb">
-                  <img
-                    class="project-img"
-                    src="./images/opened-book.jpg"
-                    alt="Открытый журнал"
-                    width="370"
-                    height="294"
-                  />
-                  <p class="project-overlay">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui sequi excepturi
-                    ipsa magni incidunt dolores iure officia, aliquid vel obcaecati!
-                  </p>
-                </div>
-                <div class="project-img-container">
-                  <h2 class="project-container-heading">Издание Limited Edition</h2>
-                  <p class="project-container-sub">Дизайн</p>
-                </div>
-              </a>
-            </li>
-            <li class="project-item">
-              <a href="#" class="project-link link" rel="nofollow noopener noreferrer">
-                <div class="project-thumb">
-                  <img
-                    class="project-img"
-                    src="./images/project-label.jpg"
-                    alt="Этикетка с надписью"
-                    width="370"
-                    height="294"
-                  />
-                  <p class="project-overlay">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui sequi excepturi
-                    ipsa magni incidunt dolores iure officia, aliquid vel obcaecati!
-                  </p>
-                </div>
-                <div class="project-img-container">
-                  <h2 class="project-container-heading">Проект <span class="upper">Lab</span></h2>
-                  <p class="project-container-sub">Маркетинг</p>
-                </div>
-              </a>
-            </li>
-            <li class="project-item">
-              <a href="#" class="project-link link" rel="nofollow noopener noreferrer">
-                <div class="project-thumb">
-                  <img
-                    class="project-img"
-                    src="./images/business.jpg"
-                    alt="Ноутбук с названием фирмы"
-                    width="370"
-                    height="294"
-                  />
-                  <p class="project-overlay">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui sequi excepturi
-                    ipsa magni incidunt dolores iure officia, aliquid vel obcaecati!
-                  </p>
-                </div>
-                <div class="project-img-container">
-                  <h2 class="project-container-heading">Growing Business</h2>
-                  <p class="project-container-sub">Приложение</p>
-                </div>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
-    </main>
-    <!-- футер -->
-    <footer class="footer">
-      <div class="container">
-        <div class="footer-address">
-          <a href="#" class="footer-logo logo" lang="en"><span class="logo-web">Web</span>Studio</a>
-          <address class="address">
-            <p class="address-text">г. Киев, пр-т Леси Украинки, 26</p>
-            <a
-              href="mailto:info@example.com"
-              class="footer-link link"
-              rel="nofollow noopener noreferrer"
-              >info@example.com</a
-            >
-            <a href="tel:+380991111111" class="footer-link link" rel="nofollow noopener noreferrer"
-              >+38 099 111 11 11</a
-            >
-          </address>
-        </div>
-        <div class="footer-section-follow">
-          <p class="follow-heading">Присоединяйтесь</p>
-          <ul class="follow-list list">
-            <li class="follow-item">
-              <a href="" class="follow-link" rel="nofollow noopener noreferrer">
-                <svg width="20" height="20" class="follow-icon">
-                  <use href="./images/icons.svg#icon-instagram"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="follow-item">
-              <a href="" class="follow-link" rel="nofollow noopener noreferrer">
-                <svg width="20" height="20" class="follow-icon">
-                  <use href="./images/icons.svg#icon-twitter"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="follow-item">
-              <a href="" class="follow-link" rel="nofollow noopener noreferrer">
-                <svg width="20" height="20" class="follow-icon">
-                  <use href="./images/icons.svg#icon-facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="follow-item">
-              <a href="" class="follow-link" rel="nofollow noopener noreferrer">
-                <svg width="20" height="20" class="follow-icon">
-                  <use href="./images/icons.svg#icon-linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="footer-form-container">
-          <p class="footer-form-heading">Подпишитесь на рассылку</p>
-          <form class="footer-form">
-            <input type="email" name="email" placeholder="E-mail" class="footer-input" />
-            <button type="submit" class="form-btn btn">Подписаться</button>
-          </form>
-        </div>
+    </section>
+  </main>
+  <!-- футер -->
+  <footer class="footer">
+    <div class="container">
+      <div class="address--params">
+        <a href="#" class="logo footer__logo" lang="en"><span class="logo--web">Web</span>Studio</a>
+        <address class="address">
+          <p class="address__text">г. Киев, пр-т Леси Украинки, 26</p>
+          <a href="mailto:info@example.com" class="address__link link"
+            rel="nofollow noopener noreferrer">info@example.com</a>
+          <a href="tel:+380991111111" class="address__link link" rel="nofollow noopener noreferrer">+38 099 111 11
+            11</a>
+        </address>
       </div>
-    </footer>
-  </body>
+      <div class="join">
+        <p class="join__title">Присоединяйтесь</p>
+        <ul class="join__list list">
+          <li class="join__item">
+            <a href="" class="join__link" rel="nofollow noopener noreferrer">
+              <svg width="20" height="20" class="join__icon">
+                <use href="./images/icons.svg#icon-instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="join__item">
+            <a href="" class="join__link" rel="nofollow noopener noreferrer">
+              <svg width="20" height="20" class="join__icon">
+                <use href="./images/icons.svg#icon-twitter"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="join__item">
+            <a href="" class="join__link" rel="nofollow noopener noreferrer">
+              <svg width="20" height="20" class="join__icon">
+                <use href="./images/icons.svg#icon-facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="join__item">
+            <a href="" class="join__link" rel="nofollow noopener noreferrer">
+              <svg width="20" height="20" class="join__icon">
+                <use href="./images/icons.svg#icon-linkedin"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="subscribe">
+        <p class="subscribe__title">Подпишитесь на рассылку</p>
+        <form class="subscribe__form">
+          <input type="email" name="email" placeholder="E-mail" class="subscribe__input" />
+          <button type="submit" class="subscribe__btn btn">Подписаться</button>
+        </form>
+      </div>
+    </div>
+  </footer>
+</body>
+
 </html>
