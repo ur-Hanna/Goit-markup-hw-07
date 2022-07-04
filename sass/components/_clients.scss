@@ -1,12 +1,13 @@
 /* КЛИЕНТЫ */
 .clients {
     background-color: inherit;
-}
+    padding: 94px 0;
 
-.clients .container {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+    .container {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
 }
 
 .clients__heading {
@@ -15,11 +16,12 @@
     line-height: 1.16;
     text-align: center;
     letter-spacing: 0.03em;
-    color: var(--heading-color);
+    color: $heading-color;
     margin-bottom: 50px;
 }
 
 .clients__list {
+    @extend %list;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -30,10 +32,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-}
 
-.clients__item:not(:last-child) {
-    margin-right: 30px;
+    &:not(:last-child) {
+        margin-right: 30px;
+    }
 }
 
 .clients__link {
@@ -41,19 +43,19 @@
     width: 170px;
     height: 92px;
     padding: 16px 32px;
-    border: 1px solid #afb1b8;
+    border: 1px solid $clients-main-color;
     border-radius: 4px;
-    color: #afb1b8;
+    color: $clients-main-color;
     transition-property: color, border;
     transition-duration: 250ms;
-    transition-timing-function: var(--timing-function);
-}
+    transition-timing-function: $timing-function;
 
-.clients__link:hover,
-.clients__link:focus {
-    border: 1px solid var(--link-active-color);
-    color: var(--link-active-color);
-    outline: transparent;
+    &:hover,
+    &:focus {
+        border: 1px solid $link-active-color;
+        color: $link-active-color;
+        outline: transparent;
+    }
 }
 
 /* цвет иконок клиентов*/

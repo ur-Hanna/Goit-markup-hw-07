@@ -1,0 +1,16 @@
+// стиль кнопок
+%btn {
+    display: inline-block;
+    cursor: pointer;
+    font-family: $main-font;
+    font-style: inherit;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    transition: background 250ms $timing-function;
+}
+
+// убирает стиль списка
+%list {
+    list-style: none;
+}

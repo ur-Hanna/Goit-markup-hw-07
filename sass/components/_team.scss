@@ -1,12 +1,13 @@
 /* КОМАНДА */
 .team {
-    background-color: #f5f4fa;
-}
+    background-color: $team-back-color;
+    padding: 94px 0;
 
-.team .container {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+    .container {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
 }
 
 .team__heading {
@@ -15,25 +16,25 @@
     line-height: 1.16;
     text-align: center;
     letter-spacing: 0.03em;
-    color: var(--heading-color);
+    color: $heading-color;
     margin-bottom: 50px;
 }
 
 .team__list {
+    @extend %list;
     display: flex;
     align-items: center;
 }
 
 .team__item {
     width: 270px;
-    background-color: var(--main-color);
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-        0px 2px 1px rgba(0, 0, 0, 0.2);
+    background-color: $main-color;
+    @include team-item-shadow;
     border-radius: 0px 0px 4px 4px;
-}
 
-.team__item:not(:last-child) {
-    margin-right: 30px;
+    &:not(:last-child) {
+        margin-right: 30px;
+    }
 }
 
 .team__image {
@@ -52,7 +53,7 @@
     line-height: 1.19;
     text-align: center;
     letter-spacing: 0.03em;
-    color: var(--card-title-color);
+    color: $card-title-color;
     margin: 0 auto 10px;
 }
 
@@ -62,12 +63,13 @@
     line-height: 1.19;
     text-align: center;
     letter-spacing: 0.03em;
-    color: var(--description-color);
+    color: $description-color;
     margin: auto 0 16px;
 }
 
 /* список иконок соцсетей команды */
 .team-meta__list {
+    @extend %list;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -80,12 +82,12 @@
     justify-content: center;
     align-items: center;
     width: 44px;
-    background-color: #fff;
+    background-color: $main-color;
     border-radius: 50%;
-}
 
-.team-meta__item:not(:last-child) {
-    margin-right: 10px;
+    &:not(:last-child) {
+        margin-right: 10px;
+    }
 }
 
 .team-meta__link {
@@ -94,17 +96,17 @@
     height: 44px;
     padding: 12px;
     border-radius: 50%;
-    color: #afb1b8;
+    color: $team-subtitle-color;
     transition-property: color, background;
     transition-duration: 250ms;
-    transition-timing-function: var(--timing-function);
-}
+    transition-timing-function: $timing-function;
 
-.team-meta__link:hover,
-.team-meta__link:focus {
-    background-color: var(--link-active-color);
-    color: var(--button-color);
-    border-radius: 50%;
+    &:hover,
+    &:focus {
+        background-color: $link-active-color;
+        color: $button-color;
+        border-radius: 50%;
+    }
 }
 
 .team-meta__icon {

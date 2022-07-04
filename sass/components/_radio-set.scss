@@ -1,0 +1,32 @@
+.radio-set {
+    @extend %list;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+
+    &__item:not(:last-child) {
+        margin-right: 8px;
+    }
+}
+
+/* КНОПКА кнопка */
+.radio-set__btn {
+    @extend %btn;
+    font-weight: 500;
+    line-height: 1.62;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: inherit;
+    background-color: $radio-btn-color;
+    padding: 6px 22px;
+    transition: shadow, color, background, 250ms $timing-function;
+
+    &:hover,
+    &:focus {
+        background-color: $button-back-color;
+        color: $button-color;
+        @include radio-shadow;
+        outline: transparent;
+    }
+}

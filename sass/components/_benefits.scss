@@ -6,6 +6,7 @@
 }
 
 .benefits__list {
+    @extend %list;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -13,38 +14,38 @@
 
 .benefits__item {
     width: 270px;
-}
 
-/* список иконок в преимуществах */
-.benefits__item::before {
-    content: '';
-    display: block;
-    height: 120px;
-    background-color: #f5f4fa;
-    background-repeat: no-repeat;
-    background-position: center;
-    border-radius: 4px;
-    margin-bottom: 30px;
-}
+    &:not(:last-child) {
+        margin-right: 30px;
+    }
 
-.benefits__item:nth-child(1)::before {
-    background-image: url(../images/antenna.svg);
-}
+    /* список иконок в преимуществах */
+    &::before {
+        content: '';
+        display: block;
+        height: 120px;
+        background-color: $benefits-image-color;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 4px;
+        margin-bottom: 30px;
+    }
 
-.benefits__item:nth-child(2)::before {
-    background-image: url(../images/clock.svg);
-}
+    &:nth-child(1)::before {
+        background-image: url(../images/antenna.svg);
+    }
 
-.benefits__item:nth-child(3)::before {
-    background-image: url(../images/diagram.svg);
-}
+    &:nth-child(2)::before {
+        background-image: url(../images/clock.svg);
+    }
 
-.benefits__item:nth-child(4)::before {
-    background-image: url(../images/astronaut.svg);
-}
+    &:nth-child(3)::before {
+        background-image: url(../images/diagram.svg);
+    }
 
-.benefits__item:not(:last-child) {
-    margin-right: 30px;
+    &:nth-child(4)::before {
+        background-image: url(../images/astronaut.svg);
+    }
 }
 
 .benefits__title {
@@ -54,7 +55,7 @@
     line-height: 1.14;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    color: var(--heading-color);
+    color: $heading-color;
 }
 
 .benefits__description {
@@ -62,5 +63,5 @@
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
-    color: var(--description-color);
+    color: $description-color;
 }

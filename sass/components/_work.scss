@@ -1,12 +1,13 @@
 /* ЗАНЯТИЯ */
 .work {
     background-color: inherit;
-}
+    padding: 94px 0;
 
-.work .container {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+    .container {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
 }
 
 .work__heading {
@@ -15,21 +16,22 @@
     line-height: 1.16;
     text-align: center;
     letter-spacing: 0.03em;
-    color: var(--heading-color);
+    color: $heading-color;
     margin-bottom: 50px;
 }
 
 .work__list {
+    @extend %list;
     display: flex;
     align-items: center;
 }
 
 .work__item {
     width: 370px;
-}
 
-.work__item:not(:last-child) {
-    margin-right: 30px;
+    &:not(:last-child) {
+        margin-right: 30px;
+    }
 }
 
 .work__meta {
@@ -45,7 +47,7 @@
     height: auto;
 }
 
-.work--overlay {
+.work--gray-overlay {
     position: absolute;
     z-index: 1;
     text-align: center;
@@ -62,5 +64,5 @@
     line-height: 1.14;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    color: #fff;
+    color: $footer-main-color;
 }

@@ -7,6 +7,15 @@
     padding-top: 12px;
 }
 
+.subscribe__title {
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: $footer-main-color;
+    margin-bottom: 20px;
+}
+
 .subscribe__form {
     display: flex;
     align-items: center;
@@ -25,22 +34,22 @@
     letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.6);
     outline: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    @include subscribe-border;
     border-radius: 4px;
-    /* filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15)); */
-}
 
-.subscribe__input::placeholder {
-    display: flex;
-    align-items: center;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.25;
-    letter-spacing: 0.03em;
-    color: rgba(255, 255, 255, 0.6);
+    &::placeholder {
+        display: flex;
+        align-items: center;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.25;
+        letter-spacing: 0.03em;
+        color: rgba(255, 255, 255, 0.6);
+    }
 }
 
 .subscribe__btn {
+    @extend %btn;
     display: flex;
     align-items: center;
     width: 200px;
@@ -49,16 +58,15 @@
     font-weight: inherit;
     line-height: 1.88;
     letter-spacing: 0.06em;
-    color: var(--button-color);
-    background-color: var(--button-back-color);
+    color: $button-color;
+    background-color: $button-back-color;
     background-image: url(../images/send.svg);
     background-repeat: no-repeat;
     background-position: right 28px center;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    transition: background 250ms var(--timing-function);
-}
+    @include subscribe-btn-shadow;
 
-.subscribe__btn:hover,
-.subscribe__btn:focus {
-    background-color: var(--button-active-color);
+    &:hover,
+    &:focus {
+        background-color: $button-active-color;
+    }
 }
